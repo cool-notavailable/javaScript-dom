@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter</title>
+    <style>
+        .container{
+            display:flex;
+        }
+      button {
+        color: black;
+        margin: 2em;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <h1>Counter</h1>
+    <div class="container">
+        <button onclick="increment()">+</button>
+    <h2 class="num">0</h2>
+    <button onclick="decrement()">-</button>
+  </body>
+    </div>
+   <script>
+    const count = document.querySelector(".num");
+    const increment = () =>{
+        count.innerHTML = Number(count.innerHTML) + 1;
+    }
+    const decrement = () =>{
+        if(Number(count.innerHTML) > 0){
+            count.innerHTML = Number(count.innerHTML) - 1;
+        }else{
+            alert("Counter is going beyond 0");
+        }
+    }
+
+   </script>
+</html>

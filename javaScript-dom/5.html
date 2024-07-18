@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      img {
+        height: 300px;
+        width: 500px;
+        margin-top: 2em;
+      }
+      button {
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="heading"></h1>
+    <button onclick="toggle()">Toggle Image</button><br />
+    <img src="./MEDICAL.webp" alt="" id="img" />
+    <script>
+      const heading = document.querySelector(".heading");
+      const image = document.querySelector("#img");
+
+      const toggle = () => {
+        if (image.style.opacity == 0) {
+          image.style.opacity = 100;
+          heading.innerText = "Your Image is visible.";
+        } else {
+          image.style.opacity = 0;
+          heading.innerText = "Your Image is hidden.";
+        }
+      };
+    </script>
+  </body>
+</html>

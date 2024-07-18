@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign up form</title>
+    <style>
+      .container {
+        width: 50vw;
+        height: 40vh;
+        margin-left: 30em;
+        margin-top: 2em;
+      }
+      .form {
+        display: flex;
+        flex-direction: column;
+      }
+      button {
+        margin-top: 2em;
+        width: 5em;
+        color: black;
+      }
+      label {
+        margin: 1em 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>SignUP form</h1>
+
+      <form action="get" class="form">
+        <label for="2"
+          >Name
+          <input
+            type="text"
+            name=""
+            placeholder="{Minimum 3 character}"
+            id="name"
+          />
+        </label>
+        <label for="2"
+          >Email
+          <input
+            type="email"
+            name="23"
+            id="Emain"
+            placeholder="Enter your Email"
+          />
+        </label>
+        <label for="Password"
+          >Password
+          <input
+            type="password"
+            name="343"
+            placeholder="Minimum 8 character"
+            id="password"
+          />
+        </label>
+      </form>
+      <button id="sumbit" onclick="submit()">Sumbit</button>
+    </div>
+    <script>
+      const Name = document.getElementById("name");
+      const email = document.getElementById("Email");
+      const password = document.getElementById("password");
+      const submit = () => {
+        if (Name.value.length >= 3 && password.value.length >= 8) {
+          alert("Form Validation Successful !!");
+        } else {
+          alert("form Validation Failed !!");
+        }
+      };
+    </script>
+  </body>
+</html>

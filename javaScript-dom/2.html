@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .toggle {
+        height: 3em;
+        width: 6em;
+        font-size: 1em;
+        color: black;
+        border-radius: 5px;
+        background-color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="mode">This is light mode</h1>
+    <button id="toggle" class="toggle" onclick="button()">Toggle Theme</button>
+  </body>
+  <script>
+    const mode = document.querySelector("#mode");
+    const color = document.body.style.backgroundColor;
+    const button = () => {
+      // document.body.style.backgroundColor = "black";
+      if (color === "black") {
+        document.body.style.backgroundColor = "white";
+        mode.innerText = "This is Light mode";
+        mode.style.color = "black";
+      } else {
+        document.body.style.backgroundColor = "black";
+        mode.innerText = "This is Dark mode";
+        mode.style.color = "white";
+      }
+    };
+  </script>
+</html>
